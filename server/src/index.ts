@@ -1,9 +1,13 @@
 import Koa, { Context } from "koa";
+const multer = require('@koa/multer');
 
 const app: Koa = new Koa();
+const upload = multer();
+
+app.use(upload.single('profile'))
 
 app.use((ctx: Context) => {
-  ctx.body = "Jon Snow meurt saison 5 épisode 10";
+  ctx.status = 201;
 });
 
 app.listen(8080);

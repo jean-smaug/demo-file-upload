@@ -5,7 +5,8 @@
   "repository": "git@github.com:jean-smaug/demo-file-upload.git",
   "author": "jean-smaug <maximeblanc.dev@gmail.com>",
   "license": "MIT",
-  "scripts": { 
+  "scripts": {
+    "client": "serve -s client",
     "dev": "backpack",
     "build": "backpack build"
   },
@@ -13,10 +14,13 @@
     "@types/koa": "2.0.51",
     "@types/node": "12.11.7",
     "backpack-core": "0.8.4",
+    "serve": "11.2.0",
     "ts-loader": "6.2.1",
     "typescript": "3.6.4"
   },
   "dependencies": {
-    "koa": "2.11.0"
+    "@koa/multer": "2.0.0",
+    "koa": "2.11.0",
+    "multer": "1.4.2"
   }
 }
