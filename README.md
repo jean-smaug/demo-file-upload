@@ -4,3 +4,4 @@
 
 - `yarn install`
 - `yarn dev`
+- Aller sur [http://localhost:5000](http://localhost:5000)

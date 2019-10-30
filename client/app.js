@@ -16,20 +16,20 @@ function toggleFileInputStatus() {
 fileInput.addEventListener("dragenter", toggleFileInputStatus)
 fileInput.addEventListener("dragleave", toggleFileInputStatus)
 
-submitButton.addEventListener("click", (e) => {
+submitButton.addEventListener("click", async (e) => {
     e.preventDefault()
 
     const formData = new FormData()
     formData.append("file", fileInput.files[0])
 
-    fetch("http://localhost:4000/upload", { 
-        method: "POST",
-        body: formData
-    })
-    .then(() => {
+    try {
+        await fetch("http://localhost:4000/upload", { 
+            method: "POST",
+            body: formData
+        })
+
         message.innerText = "Fichier uploadé avec succès \\o/"
-    })
-    .catch(() => {
+    } catch (error) {
         message.innerText = "C'est la cata, c'est la cata, c'est la catastrophe /o\\"
-    })
+    }
 })
