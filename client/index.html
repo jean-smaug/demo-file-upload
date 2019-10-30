@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>File upload</title>
+    <link rel="stylesheet" href="./normalize.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <form>
+    <form class="Container">
         <div id="formGroup" class="FormGroup">
             <input id="fileInput" class="Input" type="file">
             <label for="fileInput" class="Label">Ajouter un fichier</label>
         </div>
 
-        <button id="submitButton" type="submit">Envoyer</button>
+        <button id="submitButton" class="Button" type="submit">Envoyer</button>
     </form>
     <script src="./observable.js"></script>
     <script src="./app.js"></script>
