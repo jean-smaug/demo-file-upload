@@ -21,6 +21,7 @@
     "typescript": "3.6.4"
   },
   "dependencies": {
+    "@koa/cors": "3.0.0",
     "@koa/multer": "2.0.0",
     "@koa/router": "8.0.2",
     "koa": "2.11.0",

@@ -1,6 +1,7 @@
 const submitButton = document.getElementById("submitButton");
 const fileInput = document.getElementById("fileInput");
 const formGroup = document.getElementById("formGroup");
+const message = document.getElementById("message");
 
 function toggleFileInputStatus() {
     if(formGroup.className.includes("FormGroup--WillDrop")) {
@@ -24,7 +25,11 @@ submitButton.addEventListener("click", (e) => {
     fetch("http://localhost:4000/upload", { 
         method: "POST",
         body: formData
-    }).then(response => {
-        console.log(response)
+    })
+    .then(() => {
+        message.innerText = "Fichier uploadé avec succès \\o/"
+    })
+    .catch(() => {
+        message.innerText = "C'est la cata, c'est la cata, c'est la catastrophe /o\\"
     })
 })

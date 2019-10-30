@@ -4,6 +4,7 @@ import logger from "koa-logger"
 import fs from "fs";
 import path from "path"
 const multer = require('@koa/multer');
+const cors = require('@koa/cors');
 
 const app: Koa = new Koa();
 const router: Router = new Router();
@@ -16,6 +17,7 @@ if(!fs.existsSync(storagePath)) {
 }
 
 app.use(logger())
+app.use(cors())
 
 router.post("/upload", upload.single('file'), (ctx: any) => {
   const { originalname, buffer } = ctx.request.file
