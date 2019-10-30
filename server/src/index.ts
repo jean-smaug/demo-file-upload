@@ -10,7 +10,6 @@ const upload = multer();
 app.use(logger())
 
 router.post("/upload", upload.single('profile'), (ctx: any) => {
-  console.log('ici', ctx.request.file)
   ctx.status = 200
 })
 

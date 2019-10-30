@@ -1,5 +1,19 @@
 const submitButton = document.getElementById("submitButton");
 const fileInput = document.getElementById("fileInput");
+const formGroup = document.getElementById("formGroup");
+
+function toggleFileInputStatus() {
+    if(formGroup.className.includes("FormGroup--WillDrop")) {
+        formGroup.className = "FormGroup"
+
+        return
+    }
+
+    formGroup.className += " FormGroup--WillDrop"
+}
+
+fileInput.addEventListener("dragenter", toggleFileInputStatus)
+fileInput.addEventListener("dragleave", toggleFileInputStatus)
 
 submitButton.addEventListener("click", (e) => {
     e.preventDefault()
