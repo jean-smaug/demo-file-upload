@@ -20,9 +20,9 @@ app.use(logger())
 app.use(cors())
 
 router.post("/upload", upload.single('file'), (ctx: any) => {
-  const { originalname, buffer } = ctx.request.file
-
-  fs.writeFileSync(`${storagePath}/${originalname}`, buffer)
+  console.log(ctx.request.file)
+  // const { originalname, buffer } = ctx.request.file
+  // fs.writeFileSync(`${storagePath}/${originalname}`, buffer)
 
   ctx.status = 200
 })
