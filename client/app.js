@@ -21,7 +21,7 @@ submitButton.addEventListener("click", (e) => {
     const formData = new FormData()
     const headers = new Headers();
 
-    formData.append("profile", fileInput.files[0])
+    formData.append("file", fileInput.files[0])
     headers.append("Content-Type", "multipart/form-data")
 
     fetch("http://localhost:4000/upload", { 

@@ -17,7 +17,7 @@ if(!fs.existsSync(storagePath)) {
 
 app.use(logger())
 
-router.post("/upload", upload.single('profile'), (ctx: any) => {
+router.post("/upload", upload.single('file'), (ctx: any) => {
   const { originalname, buffer } = ctx.request.file
 
   fs.writeFileSync(`${storagePath}/${originalname}`, buffer)
