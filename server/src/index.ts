@@ -9,7 +9,7 @@ const app: Koa = new Koa();
 const router: Router = new Router();
 const upload = multer();
 
-const storagePath = path.join(__dirname, "../storage")
+const storagePath = path.join(__dirname, "../../storage")
 
 if(!fs.existsSync(storagePath)) {
   fs.mkdirSync(storagePath)
