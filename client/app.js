@@ -1,24 +1,22 @@
-const submitButton = document.getElementById("submitButton");
-const fileInput = document.getElementById("fileInput");
-const formGroup = document.getElementById("formGroup");
-const message = document.getElementById("message");
 const form = document.getElementById("form");
+const message = document.getElementById("message");
 
 function toggleFileInputStatus() {
-  if (formGroup.className.includes("FormGroup--WillDrop")) {
-    formGroup.className = "FormGroup";
+  if (form.className.includes("FormGroup--WillDrop")) {
+    form.className = "FormGroup";
 
     return;
   }
 
-  formGroup.className += " FormGroup--WillDrop";
+  form.className += " FormGroup--WillDrop";
 }
 
-fileInput.addEventListener("dragenter", toggleFileInputStatus);
-fileInput.addEventListener("dragleave", toggleFileInputStatus);
+// fileInput.addEventListener("dragenter", toggleFileInputStatus);
+// fileInput.addEventListener("dragleave", toggleFileInputStatus);
 
-submitButton.addEventListener("click", async e => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
+  
   if (!window.fetch || !window.FormData) {
     alert("Tu crois que c'est du respect mon garçon ? Est ce que tu crois que c'est du respect d'utiliser un navigateur archaïque ?");
   }
