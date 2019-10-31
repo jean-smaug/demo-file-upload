@@ -10,7 +10,7 @@
     } 
     else {
         http_response_code(201);
-        echo "Ça a fonctionné :)";
+        readfile('success.html');
     }
 
     header( "Refresh:2; url=index.html", true, 303);
