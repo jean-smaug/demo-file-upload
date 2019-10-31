@@ -29,4 +29,4 @@ router.post("/upload", upload.single('file'), (ctx: any) => {
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-app.listen(4000,  () => console.log("listening on port 4000"));
+app.listen(3000,  () => console.log("listening on port 4000"));
