@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>File upload</title>
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <form id="form">
-        <input id="fileInput" class="Input" type="file" name="file">
-        <button id="submitButton" class="Button" type="submit">Envoyer</button>
+    <form id="form" class="form">
+        <input id="fileInput" class="input" type="file" name="file">
+        <button id="submitButton" class="button" type="submit">Envoyer</button>
     </form>
-    <p id="message"></p>
+    <p id="message" class="message"></p>
     <script src="./app.js"></script>
 </body>
 </html>

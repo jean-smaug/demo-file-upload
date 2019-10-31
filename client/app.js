@@ -20,7 +20,7 @@ fileInput.addEventListener("dragleave", toggleFileInputStatus);
 submitButton.addEventListener("click", async e => {
   e.preventDefault();
   if (!window.fetch || !window.FormData) {
-    alert("Respect toi");
+    alert("Tu crois que c'est du respect mon garçon ? Est ce que tu crois que c'est du respect d'utiliser un navigateur archaïque ?");
   }
 
   const formData = new FormData(form);
