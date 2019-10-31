@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "php": "cd php && php -S localhost:8000",
+    "node": "backpack",
     "client": "serve -s client",
     "dev": "concurrently 'backpack' 'serve -s client'",
     "build": "backpack build"
