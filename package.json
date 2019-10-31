@@ -6,6 +6,7 @@
   "author": "jean-smaug <maximeblanc.dev@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "php": "cd php && php -S localhost:8000",
     "client": "serve -s client",
     "dev": "concurrently 'backpack' 'serve -s client'",
     "build": "backpack build"
