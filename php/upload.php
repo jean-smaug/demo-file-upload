@@ -6,7 +6,11 @@
 
     if($fileUploaded === false) {
         http_response_code(500);
-        return;
+        echo "Problème serveur";
+    } 
+    else {
+        http_response_code(201);
+        echo "Ça a fonctionné :)";
     }
 
-    http_response_code(201);
+    header( "Refresh:2; url=index.html", true, 303);
