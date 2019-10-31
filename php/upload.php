@@ -2,9 +2,9 @@
     header("Access-Control-Allow-Origin: *");
     
     $file = $_FILES["profile-picture"];
-    $fileUploaded = move_uploaded_file($file["tmp_name"], __DIR__ . "/../storage/" . $file["name"]);
+    $isFileUploaded = move_uploaded_file($file["tmp_name"], __DIR__ . "/../storage/" . $file["name"]);
 
-    if($fileUploaded === false) {
+    if($isFileUploaded === false) {
         http_response_code(500);
         echo "Problème serveur";
     } 
