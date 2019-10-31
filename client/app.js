@@ -26,7 +26,7 @@ submitButton.addEventListener("click", async e => {
   const formData = new FormData(form);
 
   try {
-    await fetch("http://localhost:8000/upload.php", {
+    await fetch("http://localhost:4000/upload.php", {
       method: "POST",
       body: formData
     });
