@@ -1,7 +1,7 @@
 <?php
     header("Access-Control-Allow-Origin: *");
     
-    $file = $_FILES["profile-picture"];
+    $file = $_FILES["background"];
     $isFileUploaded = move_uploaded_file($file["tmp_name"], __DIR__ . "/../storage/" . $file["name"]);
 
     if($isFileUploaded === false) {
