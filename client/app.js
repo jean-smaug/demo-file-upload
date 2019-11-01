@@ -16,7 +16,7 @@ function toggleFileInputStatus() {
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  
+
   if (!window.fetch || !window.FormData) {
     alert("Tu crois que c'est du respect mon garçon ? Est ce que tu crois que c'est du respect d'utiliser un navigateur archaïque ?");
   }
@@ -34,6 +34,8 @@ form.addEventListener("submit", async (e) => {
     message.innerText =
       "C'est la cata, c'est la cata, c'est la catastrophe /o\\";
   }
+
+  form.reset()
 
   setTimeout(() => {
     message.innerText = "";
