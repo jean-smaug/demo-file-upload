@@ -14,14 +14,14 @@ function toggleFileInputStatus() {
 // fileInput.addEventListener("dragenter", toggleFileInputStatus);
 // fileInput.addEventListener("dragleave", toggleFileInputStatus);
 
-form.addEventListener("submit", async (e) => {
+form.addEventListener("submit", async function(e) {
   e.preventDefault();
 
   if (!window.fetch || !window.FormData) {
     alert("Tu crois que c'est du respect mon garçon ? Est ce que tu crois que c'est du respect d'utiliser un navigateur archaïque ?");
   }
 
-  const formData = new FormData(form);
+  const formData = new FormData(this);
 
   try {
     await fetch("http://localhost:4000/upload.php", {
@@ -35,7 +35,7 @@ form.addEventListener("submit", async (e) => {
       "C'est la cata, c'est la cata, c'est la catastrophe /o\\";
   }
 
-  form.reset()
+  this.reset()
 
   setTimeout(() => {
     message.innerText = "";
